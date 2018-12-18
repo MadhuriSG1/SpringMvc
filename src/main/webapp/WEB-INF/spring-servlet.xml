@@ -16,5 +16,14 @@
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	<bean id="registrationService" class="com.api.services.RegistrationServiceImpl"></bean>
+	<bean id="registrationService" class="com.api.services.RegistrationServiceImpl"/>
+	    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="datasource" />
+    </bean>
+    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/myusers" />
+        <property name="username" value="admin" />
+        <property name="password" value="admin" />
+    </bean>
 </beans>

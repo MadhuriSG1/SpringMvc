@@ -8,7 +8,6 @@ import com.api.repo.RegRepository;
 public class RegistrationServiceImpl implements RegistationService {
 	@Autowired
 	private RegRepository regRepository;
-	@Override
 	public void save(User user) {
 		regRepository.save(user);
 	}

@@ -1,2 +1,6 @@
 /home/admin1/eclipse-workspace/demo/src/main/java/com/api/controllers/RegistrationController.java
+/home/admin1/eclipse-workspace/demo/src/main/java/com/api/services/RegistrationServiceImpl.java
+/home/admin1/eclipse-workspace/demo/src/main/java/com/api/repo/RegRepository.java
+/home/admin1/eclipse-workspace/demo/src/main/java/com/api/repo/RegRepositoryImpl.java
+/home/admin1/eclipse-workspace/demo/src/main/java/com/api/services/RegistationService.java
 /home/admin1/eclipse-workspace/demo/src/main/java/com/api/models/User.java

@@ -1,7 +1,5 @@
 package com.api.controllers;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,10 +13,12 @@ import com.api.services.RegistationService;
 
 @Controller
 public class RegistrationController {
+	
 	@Autowired
 	private RegistationService registrationService;
+	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
-	public ModelAndView getRegisterView(HttpServletRequest req, HttpServletResponse resp) {
+	public ModelAndView getRegisterView() {
 		ModelAndView mav = new ModelAndView("register");
 		mav.addObject("user", new User());
 		return mav;
@@ -28,8 +28,8 @@ public class RegistrationController {
 	public ModelAndView registerProcess(@ModelAttribute User user) {
 		
 		registrationService.save(user);
-		ModelAndView mav = new ModelAndView("register");
-		mav.addObject("user", new User());
+		ModelAndView mav = new ModelAndView("successregister");
+		mav.addObject("value", 3);
 		return mav;
 	}
 }
